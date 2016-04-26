@@ -1,0 +1,14 @@
+PODS:
+  - SwiftyGlyphs (0.1.0)
+
+DEPENDENCIES:
+  - SwiftyGlyphs (from `../`)
+
+EXTERNAL SOURCES:
+  SwiftyGlyphs:
+    :path: ../
+
+SPEC CHECKSUMS:
+  SwiftyGlyphs: 664a7a97aea0495b79b8bb883099d797958b0f1a
+
+COCOAPODS: 0.39.0

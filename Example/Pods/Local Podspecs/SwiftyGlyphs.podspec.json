@@ -1,0 +1,24 @@
+{
+  "name": "SwiftyGlyphs",
+  "version": "0.1.0",
+  "summary": "A short description of SwiftyGlyphs.",
+  "description": "",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/SwiftyGlyphs",
+  "license": "MIT",
+  "authors": {
+    "Woodie Dovich": "woodiewebsafe@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/SwiftyGlyphs.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "SwiftyGlyphs/Classes/**/*",
+  "resource_bundles": {
+    "SwiftyGlyphs": [
+      "SwiftyGlyphs/Assets/*.png"
+    ]
+  }
+}
