@@ -1,0 +1,8 @@
+use_frameworks!
+
+
+target 'SwiftyGlyphs_Tests', :exclusive => true do
+  pod 'SwiftyGlyphs', :path => '../'
+
+  
+end
