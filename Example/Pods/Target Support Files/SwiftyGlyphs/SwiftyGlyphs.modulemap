@@ -1,0 +1,6 @@
+framework module SwiftyGlyphs {
+  umbrella header "SwiftyGlyphs-umbrella.h"
+
+  export *
+  module * { export * }
+}
