@@ -9,12 +9,12 @@ import UIKit
 
 public class SwiftyGlyphs {
     
-    private var glyphs = [Glyph]()
+    var glyphs = [Glyph]()
     var label = UILabel()
     var view:UIView?
     var position = CGPointZero
     
-    init(fontName:String, size:CGFloat) {
+    public init(fontName:String, size:CGFloat) {
         label.font = UIFont(name: fontName, size: size)
     }
     
@@ -29,27 +29,12 @@ public class SwiftyGlyphs {
         }
     }
     
-    func generateGlyphs() {
-        let images = ImageExtractor.getImages(label)
-        for image in images {
-            let glyph = Glyph(img: image, width: image.size.width)
-            glyphs.append(glyph)
-        }
-    }
-    
-    func setLocation(view:UIView, pos:CGPoint) {
+    public func setLocation(view:UIView, pos:CGPoint) {
         addToView(view)
         layout(pos)
     }
     
-    func addToView(view:UIView ) {
-        self.view = view
-        for glyph in glyphs {
-            view.addSubview(glyph.imgView)
-        }
-    }
-    
-    func layout(position:CGPoint) {
+    public func layout(position:CGPoint) {
         self.position = position
         var spacing:CGFloat = position.x
         for glyph in glyphs {
@@ -64,13 +49,13 @@ public class SwiftyGlyphs {
         }
     }
     
-    func centerTextToView() {
+    public func centerTextToView() {
         let viewWidth = view?.frame.size.width ?? 0
         position.x = viewWidth / 2.0 - getWidthOfText()/2.0
         layout(position)
     }
     
-    func getWidthOfText() -> CGFloat {
+    public func getWidthOfText() -> CGFloat {
         var width:CGFloat = 0.0
         for glyph in glyphs {
             width += glyph.width
@@ -78,8 +63,23 @@ public class SwiftyGlyphs {
         return width
     }
     
-    func getGlyphs() -> [Glyph] {
+    public func getGlyphs() -> [Glyph] {
         return glyphs
+    }
+    
+    func generateGlyphs() {
+        let images = ImageExtractor.getImages(label)
+        for image in images {
+            let glyph = Glyph(img: image, width: image.size.width)
+            glyphs.append(glyph)
+        }
+    }
+    
+    func addToView(view:UIView ) {
+        self.view = view
+        for glyph in glyphs {
+            view.addSubview(glyph.imgView)
+        }
     }
     
     func cleanup() {

@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
   s.author           = { "Woodie Dovich" => "woodiewebsafe@gmail.com" }
 
   # s.platform     = :ios
-  s.platform     = :ios, "8.0"
+  s.platform     = :ios, "9.0"
 
   # s.ios.deployment_target = "5.0"
 
@@ -31,8 +31,8 @@ Pod::Spec.new do |s|
 
 
 #s.source_files  = "Classes", "Classes/**/*.{h,m}"
-  s.source_files  =  "Source/*.{h,m,swift}"
-  s.exclude_files = "Classes/Exclude"
+  s.source_files  =  'Source/*'
+ # s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
 

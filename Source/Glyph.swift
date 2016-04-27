@@ -9,9 +9,9 @@ import SpriteKit
 import UIKit
 
 public class Glyph {
-    let width:CGFloat
-    var imgView:UIImageView
-    var position:CGPoint = CGPointZero
+    public let width:CGFloat
+    public var imgView:UIImageView
+    public var position:CGPoint = CGPointZero
     
     init (img:UIImage,width:CGFloat) {
         self.imgView = UIImageView(image: img)

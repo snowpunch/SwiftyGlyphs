@@ -12,12 +12,12 @@ import UIKit
 
 public class SpriteGlyphs {
     
-    private var glyphs = [SKSpriteNode]()
+    var glyphs = [SKSpriteNode]()
     var scene = SKScene()
     var label = UILabel()
     var position = CGPointZero
     
-    init(fontName:String, size:CGFloat) {
+    public init(fontName:String, size:CGFloat) {
         label.font = UIFont(name: fontName, size: size)
     }
     
@@ -32,34 +32,15 @@ public class SpriteGlyphs {
         }
     }
     
-    func generateGlyphs() {
-        let images = ImageExtractor.getImages(label)
-        for image in images {
-            let sprite = SKSpriteNode(texture:SKTexture(image: image))
-            sprite.userData = ["width":image.size.width]
-            glyphs.append(sprite)
-        }
-    }
+
     
-    func setLocation(skview:SKView, pos:CGPoint) {
+    public func setLocation(skview:SKView, pos:CGPoint) {
         addToView(skview)
         layout(pos)
     }
     
-    // you can pass in a nib or storyboard UIView that is customized to SKView.
-    func addToView(skview:SKView ) {
-        scene.scaleMode = .ResizeFill
-        skview.backgroundColor = SKColor.clearColor()
-        scene.backgroundColor = skview.backgroundColor!
-        skview.presentScene(scene)
-        for glyph in glyphs {
-            scene.addChild(glyph)
-        }
-        skview.hidden = false
-    }
-    
     // Sprite co-ordinates are opposite on the Y axis. (0,0) is (left,bottom)
-    func layout(position:CGPoint) {
+   public func layout(position:CGPoint) {
         self.position = position
         
         var spacing:CGFloat = position.x
@@ -76,12 +57,12 @@ public class SpriteGlyphs {
         }
     }
     
-    func centerTextToView() {
+    public func centerTextToView() {
         position.x = self.scene.size.width / 2.0 - getWidthOfText()/2.0
         layout(position)
     }
     
-    func getWidthOfText() -> CGFloat {
+    public func getWidthOfText() -> CGFloat {
         var width:CGFloat = 0.0
         for glyph in glyphs {
             width += glyph.userData?["width"] as! CGFloat
@@ -89,8 +70,29 @@ public class SpriteGlyphs {
         return width
     }
     
-    func getSprites() -> [SKSpriteNode] {
+    public func getSprites() -> [SKSpriteNode] {
         return glyphs
+    }
+    
+    // you can pass in a nib or storyboard UIView that is customized to SKView.
+    func addToView(skview:SKView ) {
+        scene.scaleMode = .ResizeFill
+        skview.backgroundColor = SKColor.clearColor()
+        scene.backgroundColor = skview.backgroundColor!
+        skview.presentScene(scene)
+        for glyph in glyphs {
+            scene.addChild(glyph)
+        }
+        skview.hidden = false
+    }
+    
+    func generateGlyphs() {
+        let images = ImageExtractor.getImages(label)
+        for image in images {
+            let sprite = SKSpriteNode(texture:SKTexture(image: image))
+            sprite.userData = ["width":image.size.width]
+            glyphs.append(sprite)
+        }
     }
     
     func cleanup() {
