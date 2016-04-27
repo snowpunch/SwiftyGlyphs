@@ -26,10 +26,10 @@ Pod::Spec.new do |s|
 
   # s.ios.deployment_target = "5.0"
 
-  s.source       = { :git => "https://github.com/snowpunch/SwiftyGlyphs.git", :tag => "0.1.3" }
+  
 
-
-  s.source_files  =  'Source/*'
+  s.source   = { :git => "https://github.com/snowpunch/SwiftyGlyphs.git", :tag => s.version }
+  s.source_files = "Source/*.swift"
 
   # s.public_header_files = "Classes/**/*.h"
 
