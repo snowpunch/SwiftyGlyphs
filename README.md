@@ -66,11 +66,10 @@ class ViewController: UIViewController {
       spriteLabel.setLocation(skview, pos: CGPoint(x:0,y:30))
       spriteLabel.centerTextToView()
 
-      spriteKitAnimation(spriteLabel)
-   }
-
-   func spriteKitAnimation(glyphSprites:SpriteGlyphs) {
-      let sprites = glyphSprites.getSprites()
+      spriteKitAnimation(spriteLabel.getSprites())
+    }
+    
+    func spriteKitAnimation(sprites:[SKSpriteNode]) {
 
       let moveSeq = SKAction.sequence([
          SKAction.moveBy(CGVector(dx:30,dy:0), duration: 0.3),
@@ -89,12 +88,12 @@ class ViewController: UIViewController {
       rotationSeq.timingFunction = snappyEaseOut
 
       var delay = 0.0
-      for glyph in sprites {
+      for glyphSprite in sprites {
          let delaySeq = SKAction.sequence([Act.waitForDuration(delay),rotationSeq])
          let group = SKAction.group([moveSeq,delaySeq])
          group.timingMode = .EaseInEaseOut
          let repeatAction = SKAction.repeatActionForever(group)
-         glyph.runAction(repeatAction)
+         glyphSprite.runAction(repeatAction)
          delay += 0.01
       }
    }
