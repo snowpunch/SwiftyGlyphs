@@ -11,8 +11,9 @@
 
 ## Usage
 
-Animate an array of characters.  (working example)
+Animate an array of characters.
 
+![alt tag](https://github.com/snowpunch/SwiftyGlyphs/blob/master/swiftyglyphs.png?raw=true)
 ```swift
 import UIKit
 import SwiftyGlyphs
@@ -43,10 +44,11 @@ class ViewController: UIViewController {
 }
 ```
 
-## SpriteKit example
+## SpriteKit Usage
 
-With this example I added a UIView to storyboard UIViewController and then customized it in the side panel as an SKView. 
+Requres an SKView. With this example I added a UIView the storyboard UIViewController and then customized it in the side panel as an SKView. Then dragged over the IBOutlet.
 
+![alt tag](https://github.com/snowpunch/SwiftyGlyphs/blob/master/spriteglyphs.png?raw=true)
 ```swift
 import UIKit
 import SpriteKit
