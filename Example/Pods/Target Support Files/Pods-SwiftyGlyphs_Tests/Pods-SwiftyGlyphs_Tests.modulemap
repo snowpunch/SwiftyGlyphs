@@ -1,6 +1,0 @@
-framework module Pods_SwiftyGlyphs_Tests {
-  umbrella header "Pods-SwiftyGlyphs_Tests-umbrella.h"
-
-  export *
-  module * { export * }
-}
