@@ -10,7 +10,7 @@ import UIKit
 public class SwiftyGlyphs {
     
     var glyphs = [Glyph]()
-    var label = UILabel()
+    public var label = UILabel()
     var view:UIView?
     var position = CGPointZero
     
