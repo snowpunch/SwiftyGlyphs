@@ -4,8 +4,10 @@
 [![License](https://img.shields.io/cocoapods/l/SwiftyGlyphs.svg?style=flat)](http://cocoapods.org/pods/SwiftyGlyphs)
 [![Platform](https://img.shields.io/cocoapods/p/SwiftyGlyphs.svg?style=flat)](http://cocoapods.org/pods/SwiftyGlyphs)
 
+Animate individual glyphs of a UILabel without needing the heavy Core Text library. Turn the glyphs into images for most cases. Optionally you can also turn glyphs into SKSpriteNodes if you need extra animation capabilities via SKActions. 
+
 ## Features
-- Dynamically generated character assets.
+- Generate array of gylph images from a UILabel.
 - Preserves font color, style and spacing as individual transparent png's.
 - Option to generate SKSpriteNode glyphs instead for SKActions.
 
