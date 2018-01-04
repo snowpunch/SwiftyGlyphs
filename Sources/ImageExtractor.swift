@@ -12,7 +12,7 @@ public class ImageExtractor {
     class func getImages(label:UILabel) -> [UIImage] {
         var images = [UIImage]()
         let text = label.text ?? "no text"
-        let attributes = [NSAttributedStringKey.font : label.font]
+        let attributes = [NSFontAttributeName : label.font]
         for char in text.characters {
             let charRect = String(char).boundingRect(with: CGSize(width: 0, height: CGFloat.greatestFiniteMagnitude), options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: attributes, context: nil)
             label.text = String(char)
