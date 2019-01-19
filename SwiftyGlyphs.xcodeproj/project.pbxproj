@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9220449421F37C8A00C3490E /* SwiftyGlyphs.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 9220449321F37C8900C3490E /* SwiftyGlyphs.podspec */; };
 		E80291431FFEAC5F00BEE605 /* SwiftyGlyphs.h in Headers */ = {isa = PBXBuildFile; fileRef = E80291411FFEAC5F00BEE605 /* SwiftyGlyphs.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E802914E1FFEAC8700BEE605 /* SpriteGlyphs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E802914A1FFEAC8700BEE605 /* SpriteGlyphs.swift */; };
 		E802914F1FFEAC8700BEE605 /* Glyph.swift in Sources */ = {isa = PBXBuildFile; fileRef = E802914B1FFEAC8700BEE605 /* Glyph.swift */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9220449321F37C8900C3490E /* SwiftyGlyphs.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SwiftyGlyphs.podspec; sourceTree = SOURCE_ROOT; };
 		E802913E1FFEAC5F00BEE605 /* SwiftyGlyphs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyGlyphs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E80291411FFEAC5F00BEE605 /* SwiftyGlyphs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftyGlyphs.h; sourceTree = "<group>"; };
 		E80291421FFEAC5F00BEE605 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 		E80291401FFEAC5F00BEE605 /* SwiftyGlyphs */ = {
 			isa = PBXGroup;
 			children = (
+				9220449321F37C8900C3490E /* SwiftyGlyphs.podspec */,
 				E80291491FFEAC8700BEE605 /* Sources */,
 				E80291411FFEAC5F00BEE605 /* SwiftyGlyphs.h */,
 				E80291421FFEAC5F00BEE605 /* Info.plist */,
@@ -110,11 +113,12 @@
 		E80291351FFEAC5F00BEE605 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0910;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = slon;
 				TargetAttributes = {
 					E802913D1FFEAC5F00BEE605 = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -141,6 +145,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9220449421F37C8A00C3490E /* SwiftyGlyphs.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,6 +180,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -182,6 +188,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -235,6 +242,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -242,6 +250,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -290,7 +299,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.slon.SwiftyGlyphs;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -311,7 +321,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.slon.SwiftyGlyphs;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
