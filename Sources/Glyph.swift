@@ -11,7 +11,7 @@ import UIKit
 public class Glyph {
     public let width:CGFloat
     public var imgView:UIImageView
-    public var position:CGPoint = CGPointZero
+    public var position:CGPoint = CGPoint.zero
     
     init (img:UIImage,width:CGFloat) {
         self.imgView = UIImageView(image: img)

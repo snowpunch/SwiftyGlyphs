@@ -12,7 +12,7 @@ public class SwiftyGlyphs {
     var glyphs = [Glyph]()
     public var label = UILabel()
     var view:UIView?
-    var position = CGPointZero
+    var position = CGPoint.zero
     
     public init(fontName:String, size:CGFloat) {
         label.font = UIFont(name: fontName, size: size)
@@ -30,8 +30,8 @@ public class SwiftyGlyphs {
     }
     
     public func setLocation(view:UIView, pos:CGPoint) {
-        addToView(view)
-        layout(pos)
+        addToView(view: view)
+        layout(position: pos)
     }
     
     public func layout(position:CGPoint) {
@@ -52,7 +52,7 @@ public class SwiftyGlyphs {
     public func centerTextToView() {
         let viewWidth = view?.frame.size.width ?? 0
         position.x = viewWidth / 2.0 - getWidthOfText()/2.0
-        layout(position)
+        layout(position: position)
     }
     
     public func getWidthOfText() -> CGFloat {
@@ -68,7 +68,7 @@ public class SwiftyGlyphs {
     }
     
     func generateGlyphs() {
-        let images = ImageExtractor.getImages(label)
+        let images = ImageExtractor.getImages(label: label)
         for image in images {
             let glyph = Glyph(img: image, width: image.size.width)
             glyphs.append(glyph)
